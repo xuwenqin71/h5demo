@@ -1,0 +1,37 @@
+*{padding:0;margin:0}
+	body{
+		text-align:center
+	}
+	.ly-plate{
+		position:relative;
+		width:480px;
+		height:480px;
+		margin: 50px auto;
+	}
+	.rotate-bg{
+		width:480px;
+		height:480px;
+		background:url(wheel.png);
+		position:absolute;
+		top:0;
+		left:0
+	}
+	.ly-plate div.lottery-star{
+		width:112px;
+		height:142px;
+		position:absolute;
+		top:166px;
+		left:184px;
+		/*text-indent:-999em;
+		overflow:hidden;
+		background:url(rotate-static.png);
+		-webkit-transform:rotate(0deg);*/
+		outline:none
+	}
+	.ly-plate div.lottery-star #lotteryBtn{
+		cursor: pointer;
+		position: absolute;
+		top:0;
+		left:0;
+		*left:-107px
+	}
