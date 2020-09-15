@@ -1,73 +1,55 @@
-.an1{
+.cube-wrap{
+	-webkit-perspective:1000px;
+	-webkit-perspective-origin: 50% 100px;
+	-moz-perspective:1000px;
+	-moz-perspective-origin: 50% 100px;
+	-ms-perspective:1000px;
+	-ms-perspective-origin: 50% 100px;
+	perspective:1000px;
+	perspective-origin: 50% 100px;
+	
+}
+#threed{
+	margin: 0 auto;
 	width: 150px;
 	height: 150px;
-	background-color: #E4370E;
-	animation: 1s an1 infinite;
+	transform-style: preserve-3d; /*三维效果*/
+	position: relative;
+	animation: 10s myrotate infinite linear;
+	
 }
-@keyframes an1 {
-  0% { background: #000; }
-  50% { 
-	  background: orange;
-   }
-  100% { 
-	  background: yellowgreen;
-	  transform: translateX(600px);/*translate() translateY() */
-	  transition: all 10s ease;
-  }
+@keyframes myrotate{
+	from { transform: rotateX(0deg); }
+	to { transform: rotateX(-360deg); }
 }
-.an2{
-	margin: 30px;
+.cube{
 	width: 150px;
 	height: 150px;
-	background-color: #E4370E;
-	animation: 10s an2 infinite;
+	border: #000000 solid 1px;
+	position: absolute;
+	text-align: center;
+	line-height: 150px;
+	backface-visibility: hidden;
 }
-@keyframes an2 {
-  0% { background: #000; }
-  50% { 
-	  background: orange;
-   }
-  100% { 
-	  background: yellowgreen;
-	  transform: rotate(360deg);
-	  transition: all 10s ease;
-  }
+#threed:hover{
+	animation-play-state:paused;  /*暂停动画 默认值为running*/
+	-webkit-animation-play-state:paused; /* Safari 和 Chrome */
 }
-.an3{
-	margin: 100px;
-	width: 150px;
-	height: 150px;
-	background-color: #E4370E;
-	animation: 3s an3 infinite;
+.cube:first-child{
+	transform: translateZ(75px);
 }
-@keyframes an3 {
-  0% { background: #000; }
-  50% { 
-	  background: orange;
-	  transform: scale(1.5,1.5);/* scaleX() scaleY()  填写倍数*/
-	  transition: all 3s ease;
-   }
-  100% { 
-	  background: yellowgreen;
-	  
-  }
+.cube:last-child{
+	transform: translateZ(-75px) rotateY(180deg) rotateZ(180deg);
 }
-.an4{
-	margin: 100px;
-	width: 150px;
-	height: 150px;
-	background-color: #E4370E;
-	animation: 3s an4 infinite;
+.cube:nth-child(2){
+	transform: translateX(75px) rotateY(90deg) rotateZ(180deg);
 }
-@keyframes an4 {
-  0% { background: #000; }
-  50% { 
-	  background: orange;
-	  transform: skew(10deg,10deg);/* skewX() skewY()  填写deg*/
-	  transition: all 3s ease;
-   }
-  100% { 
-	  background: yellowgreen;
-	  
-  }
+.cube:nth-child(5){
+	transform: translateX(-75px) rotateY(-90deg);
+}
+.cube:nth-child(3){
+	transform: translateY(75px) rotateX(270deg) ;
+}
+.cube:nth-child(4){
+	transform: translateY(-75px) rotateX(-270deg);
 }
