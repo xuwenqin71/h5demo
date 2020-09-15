@@ -1,0 +1,36 @@
+.timeline-content{
+  display: flex;
+  
+  }
+  .time-line{
+    padding: 10px 10px 10px 20px;
+    position: relative;
+	}
+	.time-line::before{
+	  content: '';
+	  height: 1px;
+	  width: calc(100% - 34px);
+	  background: #EBEBEB;
+	  position: absolute;
+	  left: 24px;
+	  top: 0;
+	}
+  .state-icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -12px;
+    left: 0;
+  }
+  .state-1{
+    background: url('https://static.daojia.com/assets/project/tosimple-pic/fen-zu-7-copy-6bei-fen_1589266208621.png') no-repeat;
+    background-size: cover;
+  }
+  .state-2{
+    background: url('https://static.daojia.com/assets/project/tosimple-pic/12_1589266226040.png') no-repeat;
+    background-size: cover;
+  }
+  .state-3{
+    background: url('https://static.daojia.com/assets/project/tosimple-pic/fen-zu-7-copy-3_1589266140087.png') no-repeat;
+    background-size: cover;
+  }
