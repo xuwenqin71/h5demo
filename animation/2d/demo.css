@@ -1,0 +1,73 @@
+.an1{
+	width: 150px;
+	height: 150px;
+	background-color: #E4370E;
+	animation: 1s an1 infinite;
+}
+@keyframes an1 {
+  0% { background: #000; }
+  50% { 
+	  background: orange;
+   }
+  100% { 
+	  background: yellowgreen;
+	  transform: translateX(600px);/*translate() translateY() */
+	  transition: all 10s ease;
+  }
+}
+.an2{
+	margin: 30px;
+	width: 150px;
+	height: 150px;
+	background-color: #E4370E;
+	animation: 10s an2 infinite;
+}
+@keyframes an2 {
+  0% { background: #000; }
+  50% { 
+	  background: orange;
+   }
+  100% { 
+	  background: yellowgreen;
+	  transform: rotate(360deg);
+	  transition: all 10s ease;
+  }
+}
+.an3{
+	margin: 100px;
+	width: 150px;
+	height: 150px;
+	background-color: #E4370E;
+	animation: 3s an3 infinite;
+}
+@keyframes an3 {
+  0% { background: #000; }
+  50% { 
+	  background: orange;
+	  transform: scale(1.5,1.5);/* scaleX() scaleY()  填写倍数*/
+	  transition: all 3s ease;
+   }
+  100% { 
+	  background: yellowgreen;
+	  
+  }
+}
+.an4{
+	margin: 100px;
+	width: 150px;
+	height: 150px;
+	background-color: #E4370E;
+	animation: 3s an4 infinite;
+}
+@keyframes an4 {
+  0% { background: #000; }
+  50% { 
+	  background: orange;
+	  transform: skew(10deg,10deg);/* skewX() skewY()  填写deg*/
+	  transition: all 3s ease;
+   }
+  100% { 
+	  background: yellowgreen;
+	  
+  }
+}
